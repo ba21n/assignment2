@@ -1,0 +1,140 @@
+I did the Git Lab Tutorials on Friday, February 16, 2024, in the morning. I created my GitHub account the same day but at noon.
+
+1. Paste the console output you saved at the end of step 3.C (2 points)
+The following is the output of the status.txt file:
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	docs/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+2. How many commits have been done to the repository (not only by you, but by anyone) so far? Write the git command you used to get this information (4 points)
+Answer: There have been 9 commits, in order to get this answer I used "git log" command. The following is the output I got:
+
+[master d5fae74] Added empty answers.txt Created answers.txt file in the docs folder
+ Committer: Benjamin Alvarez <magnumnight2@Benjamins-MacBook-Air.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 docs/answers.txt
+Benjamins-MacBook-Air:assignment2 magnumnight2$ git log
+commit d5fae74d2ed876767f4748c2e51f6b6a564e6496 (HEAD -> master)
+Author: Benjamin Alvarez <magnumnight2@Benjamins-MacBook-Air.local>
+Date:   Fri Feb 16 15:29:39 2024 -0500
+
+    Added empty answers.txt Created answers.txt file in the docs folder
+
+commit acba9581e06e4fb3708d9cf860c3f47c1d0bf5e3
+Author: Benjamin Alvarez <magnumnight2@Benjamins-MacBook-Air.local>
+Date:   Fri Feb 16 15:16:57 2024 -0500
+
+    Added status.txt with git status output Created a status.txt file in the docs folder to store the output of 'git status'
+
+commit e258b6326d1675c05b24158dd19b0feeb5e2e783
+Author: Benjamin Alvarez <magnumnight2@Benjamins-MacBook-Air.local>
+Date:   Fri Feb 16 15:12:20 2024 -0500
+
+    Added name and FSUID to README.mdRepository owner information added to README.md
+
+commit f4975e5d56ff331762b318bfd12c5236e0299f25 (origin/master, origin/HEAD)
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Wed Sep 25 18:33:08 2019 -0400
+
+    -> Adding an empty README.md file
+
+commit e424a923e80da4772ca789591ef3326230062a71
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Wed Sep 25 18:13:30 2019 -0400
+
+    -> Tracking .gitignore
+
+commit 03106e92a1e36708334c69dd071088c6d0937b1d
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Wed Sep 11 16:58:59 2019 -0400
+
+    -> Declared the trivial destructors for all classes
+    -> Fully formatted toString methods for all classes
+    -> Added test cases in the main method for testing the implementations
+    -> Added validation on value for engine sizes in the  Car class
+
+commit f9cd890b3f89fbe5920a1fdf7da34ee915ba27b9
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Sep 5 18:42:39 2019 -0400
+
+    -> Partial implementation of PoweredVehicle and Car
+    -> Definition of virtual functions
+
+commit f9c24b027e6275ff6a1911241014c44971b4e8d0
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Sep 5 18:04:36 2019 -0400
+
+    Refactored Vehicle class to separate definition and declarations
+    Added mileageEstimate abstract method to Vehicle
+    Implemented the Bicycle class
+
+commit 4f6c88c953f4601929df7980a19dcdaee4f13854
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Sep 5 14:59:19 2019 -0400
+
+    Base Vehicle class created
+Benjamins-MacBook-Air:assignment2 magnumnight2$ 
+
+
+3. When was the README.md  file modified last? Write the git command you used to get this information (4 points)
+Answer: The README.md file was last modified on Friday, February 16 at 3:12 p.m., by me. The following is the output I got:
+
+Benjamins-MacBook-Air:assignment2 magnumnight2$ git log --follow README.md
+commit e258b6326d1675c05b24158dd19b0feeb5e2e783
+Author: Benjamin Alvarez <magnumnight2@Benjamins-MacBook-Air.local>
+Date:   Fri Feb 16 15:12:20 2024 -0500
+
+    Added name and FSUID to README.mdRepository owner information added to README.md
+
+commit f4975e5d56ff331762b318bfd12c5236e0299f25 (origin/master, origin/HEAD)
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Wed Sep 25 18:33:08 2019 -0400
+
+    -> Adding an empty README.md file
+
+
+4. Mention two reasons why branches are used in a Git repository (4 points)
+  Branches facilitate teamwork by enabling multiple team members to work on development or fixes simultaneously, also, they provide a safe environment for testing due to the fact that they can experiment changes withouth affecting the main codebase.
+
+
+5. What is the difference between git log and git status? (4 points)
+The difference between git log and git status is that git log shows a complete history of commits with specific information (i.e. commit messages, authors, timestamps), while git status only displays the current state of the working directory.
+
+
+6. What command would you use to see the commits where “Vehicle.h” was one of the committed files? (4 points)
+The command I would use to see the commits where "Vehicle.h" was one of the committed files is the following : git log -- Vehicle.h
+
+7. What command would you use to see the commits whose commit message contains the word “file”? (4 points)
+The command I would use to see the commitse whose commit message contains the word "file" is the following : git log -- grep="file"
+
+8. In the context of object-oriented programming (I) What is inheritance? (II) What is polymorphism? (III) What is encapsulation? (6 points)
+(I) Inheritance is when a subclass can inherit properties and/or behaviors from another class (superclass), in order for the code to be reusable while facilitating the creation of hierarchical relationships between the classes.
+(II) Polymorphism is when object take on different form and/or behaviors based on their data types or class hierarchy. It is used for allowing methods to be implemented in various ways based on the specific context or type of object.
+(III) Encapsulation is when the attributes and methods that operate on the data are brought together into a single unit, known by the name of class. It is used to hide the internal implementation details of an object while also rectricting the access to the data through well-defined interfaces.
+
+
+9. What is the main difference between the “Dictator and Lieutenants” workflow and the “Integration manager” workflow? (5 points)
+The main difference between the “Dictator and Lieutenants”  workflow and the “Integration manager” workflow is that, in the Dictator and Lieutenants everyone makes pull from the blessed repository, and only the dictator can push to it. While on the Integration Manager Workflow each developer makes push to his/her own public repository, and pull from the blessed/central repository.
+
+
+10. How would a team of 100 developers benefit from following the “Dictator and Lieutenants” workflow instead of the “Centralized” workflow? (5 points)
+A team of 100 developers would benefit from following the “Dictator and Lieutenants” workflow instead of the “Centralized” workflow since the Dictator and Lieutenants workflow can provide this team a better flexibility and organization. This can be achieved by designating capable lieutenants to manage specific branches, this would improve the coordination and delegation of tasks, that can lead to the reduction of conflicts and holdups. We can also say that it provides more security to the main repository.
